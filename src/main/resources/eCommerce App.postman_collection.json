@@ -20,12 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/user/create",
+					"raw": "http://localhost:8082/api/user/create",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"user",
@@ -47,12 +47,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/user/user1",
+					"raw": "http://localhost:8082/api/user/user1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"user",
@@ -83,12 +83,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/cart/addToCart",
+					"raw": "http://localhost:8082/api/cart/addToCart",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"cart",
@@ -119,12 +119,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/order/submit/user1",
+					"raw": "http://localhost:8082/api/order/submit/user1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"order",
@@ -147,12 +147,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/order/history/user1",
+					"raw": "http://localhost:8082/api/order/history/user1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"order",
@@ -175,12 +175,12 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/api/item",
+					"raw": "http://localhost:8082/api/item",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"api",
 						"item"
@@ -204,12 +204,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/login",
+					"raw": "http://localhost:8082/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8082",
 					"path": [
 						"login"
 					]

@@ -42,7 +42,7 @@ public class CartControllerTest {
     @Before
     public void setup(){
 
-        when(userRepository.findByUsername("fymo")).thenReturn(createUser());
+        when(userRepository.findByUsername("Wentao")).thenReturn(createUser());
         when(itemRepository.findById(any())).thenReturn(Optional.of(createItem(1)));
 
     }
@@ -54,7 +54,7 @@ public class CartControllerTest {
         ModifyCartRequest request = new ModifyCartRequest();
         request.setQuantity(3);
         request.setItemId(1);
-        request.setUsername("fymo");
+        request.setUsername("Wentao");
 
         ResponseEntity<Cart> response = cartController.addTocart(request);
         assertNotNull(response);
@@ -71,7 +71,7 @@ public class CartControllerTest {
 
         BigDecimal expectedTotal = itemPrice.multiply(BigDecimal.valueOf(request.getQuantity())).add(generatedCart.getTotal());
 
-        assertEquals("fymo", actualCart.getUser().getUsername());
+        assertEquals("Wentao", actualCart.getUser().getUsername());
         assertEquals(generatedCart.getItems().size() + request.getQuantity(), actualCart.getItems().size());
         assertEquals(createItem(1), actualCart.getItems().get(0));
         assertEquals(expectedTotal, actualCart.getTotal());
@@ -86,7 +86,7 @@ public class CartControllerTest {
         ModifyCartRequest request = new ModifyCartRequest();
         request.setQuantity(1);
         request.setItemId(1);
-        request.setUsername("fymo");
+        request.setUsername("Wentao");
 
         ResponseEntity<Cart> response = cartController.removeFromcart(request);
         assertNotNull(response);
@@ -103,7 +103,7 @@ public class CartControllerTest {
 
         BigDecimal expectedTotal = generatedCart.getTotal().subtract(itemPrice.multiply(BigDecimal.valueOf(request.getQuantity())));
 
-        assertEquals("fymo", actualCart.getUser().getUsername());
+        assertEquals("Wentao", actualCart.getUser().getUsername());
         assertEquals(generatedCart.getItems().size() - request.getQuantity(), actualCart.getItems().size());
         assertEquals(createItem(2), actualCart.getItems().get(0));
         assertEquals(expectedTotal, actualCart.getTotal());

@@ -36,14 +36,14 @@ public class OrderControllerTest {
     public void setup(){
         User user = createUser();
 
-        when(userRepository.findByUsername("fymo")).thenReturn(user);
+        when(userRepository.findByUsername("Wentao")).thenReturn(user);
         when(orderRepository.findByUser(any())).thenReturn(createOrders());
     }
 
     @Test
     public void verify_submit(){
 
-        ResponseEntity<UserOrder> response = orderController.submit("fymo");
+        ResponseEntity<UserOrder> response = orderController.submit("Wentao");
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
 
@@ -72,7 +72,7 @@ public class OrderControllerTest {
     @Test
     public void verify_getOrdersForUser(){
 
-        ResponseEntity<List<UserOrder>> response = orderController.getOrdersForUser("fymo");
+        ResponseEntity<List<UserOrder>> response = orderController.getOrdersForUser("Wentao");
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
 
